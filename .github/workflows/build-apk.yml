@@ -19,13 +19,13 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: Configurar Gradle
-      run: |
-        gradle wrapper
-        chmod +x gradlew
+    - name: Configurar Gradle 8.7 Compatível
+      uses: gradle/actions/setup-gradle@v3
+      with:
+        gradle-version: "8.7"
 
-    - name: Compilar APK
-      run: ./gradlew assembleDebug --stacktrace
+    - name: Compilar APK de Teste
+      run: gradle assembleDebug --stacktrace --no-daemon
 
     - name: Publicar APK para Download
       uses: actions/upload-artifact@v4
