@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="450dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/bg_glass_card_focused"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LEANDRO CORRÊA"
+        android:textColor="@color/cyan_neon"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CRIADOR &amp; DESENVOLVEDOR"
+        android:background="@drawable/bg_badge_creator"
+        android:textColor="@color/cyan_neon"
+        android:textSize="11sp"
+        android:layout_marginTop="6dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Launcher exclusivo personalizado de alta performance para TCL OLED 55 Google TV, Xiaomi Mi TV Stick e Celulares Android."
+        android:textColor="@color/text_secondary"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btnCloseCreator"
+        android:layout_width="140dp"
+        android:layout_height="44dp"
+        android:text="Fechar"
+        android:textColor="@color/bg_obsidian"
+        android:textStyle="bold"
+        android:background="@drawable/bg_btn_download"
+        android:layout_marginTop="20dp" />
+</LinearLayout>
