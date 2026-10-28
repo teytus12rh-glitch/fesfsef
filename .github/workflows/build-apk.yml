@@ -26,6 +26,21 @@ jobs:
         mkdir -p app
         echo "android.useAndroidX=true" > app/gradle.properties
 
+    - name: Corrigir Automaticamente Nomes com Espaço
+      run: |
+        python3 -c '
+        import os
+        folder = "app/src/main/res/drawable"
+        if os.path.exists(folder):
+            for f in os.listdir(folder):
+                clean = f.strip().lstrip(" :")
+                if clean != f:
+                    src = os.path.join(folder, f)
+                    dst = os.path.join(folder, clean)
+                    os.rename(src, dst)
+                    print(f"Renomeado com sucesso: {f} -> {clean}")
+        '
+
     - name: Configurar Gradle 8.7
       uses: gradle/actions/setup-gradle@v3
       with:
