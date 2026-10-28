@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.LeandroCorreaLauncher" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.LeandroCorreaLauncher" parent="Theme.AppCompat.DayNight.NoActionBar">
         <item name="colorPrimary">@color/cyan_neon</item>
         <item name="android:windowBackground">@color/bg_obsidian</item>
     </style>
