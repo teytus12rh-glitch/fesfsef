@@ -26,8 +26,10 @@ jobs:
         mkdir -p app
         echo "android.useAndroidX=true" > app/gradle.properties
 
-    - name: Corrigir Automaticamente Nomes com Espaço
+    - name: Garantir Todos os Pôsteres na Pasta Drawable
       run: |
+        mkdir -p app/src/main/res/drawable
+
         python3 -c '
         import os
         folder = "app/src/main/res/drawable"
@@ -35,11 +37,53 @@ jobs:
             for f in os.listdir(folder):
                 clean = f.strip().lstrip(" :")
                 if clean != f:
-                    src = os.path.join(folder, f)
-                    dst = os.path.join(folder, clean)
-                    os.rename(src, dst)
-                    print(f"Renomeado com sucesso: {f} -> {clean}")
+                    os.rename(os.path.join(folder, f), os.path.join(folder, clean))
         '
+
+        cat << 'EOF' > app/src/main/res/drawable/poster_wicked.xml
+        <?xml version="1.0" encoding="utf-8"?>
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <corners android:radius="12dp" />
+            <gradient android:startColor="#163832" android:endColor="#081411" android:angle="270" />
+            <stroke android:width="1dp" android:color="#235E52" />
+        </shape>
+        EOF
+
+        cat << 'EOF' > app/src/main/res/drawable/poster_deadpool.xml
+        <?xml version="1.0" encoding="utf-8"?>
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <corners android:radius="12dp" />
+            <gradient android:startColor="#8A0F3D" android:centerColor="#4A154B" android:endColor="#0D0E1A" android:angle="270" />
+            <stroke android:width="1dp" android:color="#B31853" />
+        </shape>
+        EOF
+
+        cat << 'EOF' > app/src/main/res/drawable/poster_gladiador.xml
+        <?xml version="1.0" encoding="utf-8"?>
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <corners android:radius="12dp" />
+            <gradient android:startColor="#59441B" android:endColor="#120F0B" android:angle="270" />
+            <stroke android:width="1dp" android:color="#8A6B2D" />
+        </shape>
+        EOF
+
+        cat << 'EOF' > app/src/main/res/drawable/poster_stranger_things.xml
+        <?xml version="1.0" encoding="utf-8"?>
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <corners android:radius="12dp" />
+            <gradient android:startColor="#1E284A" android:endColor="#090C17" android:angle="270" />
+            <stroke android:width="1dp" android:color="#2D3E73" />
+        </shape>
+        EOF
+
+        cat << 'EOF' > app/src/main/res/drawable/poster_duna.xml
+        <?xml version="1.0" encoding="utf-8"?>
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <corners android:radius="12dp" />
+            <gradient android:startColor="#593019" android:endColor="#120A05" android:angle="270" />
+            <stroke android:width="1dp" android:color="#8A4A27" />
+        </shape>
+        EOF
 
     - name: Configurar Gradle 8.7
       uses: gradle/actions/setup-gradle@v3
