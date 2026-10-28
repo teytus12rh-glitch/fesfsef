@@ -4,64 +4,89 @@
     android:layout_height="match_parent"
     android:orientation="horizontal"
     android:background="@color/bg_obsidian"
-    android:padding="16dp">
+    android:padding="12dp">
 
-    <!-- BARRA LATERAL -->
+    <!-- ==================== MENU LATERAL ESQUERDO ==================== -->
     <LinearLayout
         android:id="@+id/sidebarNav"
-        android:layout_width="140dp"
+        android:layout_width="160dp"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:paddingEnd="10dp"
         android:gravity="center_horizontal">
 
+        <!-- LOGO LEANDRO CORRÊA [CRIADOR] -->
         <LinearLayout
             android:id="@+id/containerCreatorBadge"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
             android:padding="6dp"
+            android:background="@drawable/selector_tv_card"
             android:focusable="true"
-            android:clickable="true"
-            android:background="@drawable/selector_tv_card">
+            android:clickable="true">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Leandro Corrêa"
-                android:textColor="@color/text_primary"
-                android:textSize="12sp"
-                android:textStyle="bold" />
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:text="📺"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:background="@drawable/bg_glass_card_focused" />
 
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="CRIADOR"
-                android:background="@drawable/bg_badge_creator"
-                android:textColor="@color/cyan_neon"
-                android:textSize="8sp"
-                android:textStyle="bold"
-                android:layout_marginTop="2dp" />
+                android:orientation="vertical"
+                android:layout_marginStart="6dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="LAUNCHER"
-                android:textColor="@color/cyan_neon"
-                android:textSize="8sp"
-                android:letterSpacing="0.2"
-                android:layout_marginTop="2dp" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Leandro Corrêa"
+                        android:textColor="@color/text_primary"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CRIADOR"
+                        android:background="@drawable/bg_badge_creator"
+                        android:textColor="@color/cyan_neon"
+                        android:textSize="7sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="4dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="L A U N C H E R"
+                    android:textColor="@color/cyan_neon"
+                    android:textSize="8sp"
+                    android:letterSpacing="0.15" />
+            </LinearLayout>
         </LinearLayout>
 
+        <!-- ITENS DO MENU -->
         <TextView
             android:id="@+id/menuInicio"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:text="🏠 Início"
+            android:text="🏠  Início"
             android:gravity="center_vertical"
-            android:paddingStart="14dp"
+            android:paddingStart="16dp"
             android:textColor="@color/text_primary"
             android:textStyle="bold"
+            android:textSize="13sp"
             android:background="@drawable/bg_glass_card_focused"
             android:focusable="true"
             android:layout_marginTop="20dp" />
@@ -70,49 +95,53 @@
             android:id="@+id/menuFilmes"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:text="🎬 Filmes"
+            android:text="🎬  Filmes"
             android:gravity="center_vertical"
-            android:paddingStart="14dp"
+            android:paddingStart="16dp"
             android:textColor="@color/text_secondary"
+            android:textSize="13sp"
             android:background="@drawable/selector_tv_card"
             android:focusable="true"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="6dp" />
 
         <TextView
             android:id="@+id/menuSeries"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:text="📺 Séries"
+            android:text="📺  Séries"
             android:gravity="center_vertical"
-            android:paddingStart="14dp"
+            android:paddingStart="16dp"
             android:textColor="@color/text_secondary"
+            android:textSize="13sp"
             android:background="@drawable/selector_tv_card"
             android:focusable="true"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="6dp" />
 
         <TextView
             android:id="@+id/menuApps"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:text="📱 Apps"
+            android:text="⊞  Aplicativos"
             android:gravity="center_vertical"
-            android:paddingStart="14dp"
+            android:paddingStart="16dp"
             android:textColor="@color/text_secondary"
+            android:textSize="13sp"
             android:background="@drawable/selector_tv_card"
             android:focusable="true"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="6dp" />
 
         <TextView
             android:id="@+id/menuConfig"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:text="⚙️ Ajustes"
+            android:text="⚙️  Configurações"
             android:gravity="center_vertical"
-            android:paddingStart="14dp"
+            android:paddingStart="16dp"
             android:textColor="@color/text_secondary"
+            android:textSize="13sp"
             android:background="@drawable/selector_tv_card"
             android:focusable="true"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="6dp" />
 
         <View
             android:layout_width="match_parent"
@@ -124,27 +153,26 @@
             android:layout_height="wrap_content"
             android:text="Boa diversão!"
             android:textColor="@color/text_secondary"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:textStyle="italic" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="🎮 Pressione OK"
+            android:text="🎮 Pressione OK para navegar"
             android:textColor="@color/cyan_neon"
             android:textSize="9sp"
             android:layout_marginTop="4dp" />
     </LinearLayout>
 
-    <!-- ÁREA PRINCIPAL -->
+    <!-- ==================== CONTEÚDO PRINCIPAL ==================== -->
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:orientation="vertical"
-        android:paddingStart="16dp">
+        android:orientation="vertical">
 
-        <!-- CABEÇALHO COM RELÓGIO -->
+        <!-- 1. TOPO: BOTÕES, RELÓGIO E DATA -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -154,11 +182,11 @@
             <TextView
                 android:id="@+id/btnMute"
                 android:layout_width="wrap_content"
-                android:layout_height="32dp"
+                android:layout_height="30dp"
                 android:text="🔇 Mudo"
                 android:gravity="center"
-                android:paddingStart="10dp"
-                android:paddingEnd="10dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
                 android:textColor="@color/text_primary"
                 android:textSize="11sp"
                 android:background="@drawable/selector_tv_card"
@@ -167,11 +195,11 @@
             <TextView
                 android:id="@+id/btnTvMode"
                 android:layout_width="wrap_content"
-                android:layout_height="32dp"
+                android:layout_height="30dp"
                 android:text="🎮 Controle TV"
                 android:gravity="center"
-                android:paddingStart="10dp"
-                android:paddingEnd="10dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
                 android:textColor="@color/text_primary"
                 android:textSize="11sp"
                 android:background="@drawable/selector_tv_card"
@@ -181,14 +209,26 @@
             <TextView
                 android:id="@+id/btnMobileMode"
                 android:layout_width="wrap_content"
-                android:layout_height="32dp"
+                android:layout_height="30dp"
                 android:text="📱 Modo Celular"
                 android:gravity="center"
-                android:paddingStart="10dp"
-                android:paddingEnd="10dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
                 android:textColor="@color/text_primary"
                 android:textSize="11sp"
                 android:background="@drawable/selector_tv_card"
+                android:layout_marginStart="8dp"
+                android:focusable="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="⬇ Baixar APK"
+                android:gravity="center"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:background="@drawable/bg_btn_download"
                 android:layout_marginStart="8dp"
                 android:focusable="true" />
 
@@ -203,7 +243,7 @@
                 android:layout_height="wrap_content"
                 android:text="19:42"
                 android:textColor="@color/text_primary"
-                android:textSize="30sp"
+                android:textSize="28sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -213,132 +253,222 @@
                 android:text="Sábado\n27 de Setembro de 2026"
                 android:textColor="@color/text_secondary"
                 android:textSize="10sp"
-                android:layout_marginStart="12dp" />
-        </LinearLayout>
-
-        <!-- WIDGET CLIMA -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@drawable/bg_glass_card"
-            android:padding="14dp"
-            android:layout_marginTop="12dp"
-            android:gravity="center_vertical">
+                android:layout_marginStart="10dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="⛅ 22°C\nParcialmente nublado • Jacarezinho - PR"
-                android:textColor="@color/text_primary"
-                android:textSize="12sp"
-                android:textStyle="bold" />
+                android:text=" 📶 ⚙"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- 2. WIDGET DE CLIMA RICO COM 3 COLUNAS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_glass_card"
+            android:padding="10dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical">
+
+            <!-- Coluna 1: Temperatura e Local -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⛅"
+                    android:textSize="32sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="22°C"
+                        android:textColor="@color/text_primary"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Parcialmente nublado"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📍 Jacarezinho - PR"
+                        android:textColor="@color/cyan_neon"
+                        android:textSize="9sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="0.8" />
+
+            <!-- Coluna 2: Previsão 5 dias -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hoje ☀️ 23°/16°  |  Dom ☀️ 25°/17°  |  Seg 🌧 24°/18°  |  Ter ☀️ 26°/19°"
+                android:textColor="@color/text_secondary"
+                android:textSize="10sp" />
 
             <View
                 android:layout_width="0dp"
                 android:layout_height="1dp"
                 android:layout_weight="1" />
 
-            <TextView
+            <!-- Coluna 3: Métricas e Citação -->
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Umidade 72% | Vento 12 km/h | UV 5"
-                android:textColor="@color/text_secondary"
-                android:textSize="11sp" />
+                android:orientation="vertical"
+                android:gravity="end">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="&quot;Grandes coisas levam tempo...&quot;"
-                android:textColor="@color/text_primary"
-                android:textSize="12sp"
-                android:textStyle="italic"
-                android:layout_marginStart="20dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Umidade 72% | Vento 12 km/h | UV 5"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="&quot;Grandes coisas levam tempo...&quot;"
+                    android:textColor="@color/text_primary"
+                    android:textSize="11sp"
+                    android:textStyle="italic"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
         </LinearLayout>
 
-        <!-- APPS FAVORITOS -->
+        <!-- 3. FILEIRA DE APPS COM BADGES GRÁFICOS -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="74dp"
             android:orientation="horizontal"
-            android:layout_marginTop="12dp">
+            android:layout_marginTop="8dp">
 
-            <TextView
+            <!-- FLIXCINE -->
+            <LinearLayout
                 android:id="@+id/cardFlixCine"
                 android:layout_width="0dp"
-                android:layout_height="76dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="▶ FLIXCINE\nFilmes e Séries"
+                android:orientation="vertical"
                 android:gravity="center"
-                android:textColor="#FF2244"
-                android:textSize="12sp"
-                android:background="@drawable/selector_tv_card"
+                android:background="@drawable/card_flixcine"
                 android:focusable="true" />
 
-            <TextView
+            <!-- YOUTUBE (COM FOCO NEON) -->
+            <LinearLayout
                 android:id="@+id/cardYouTube"
                 android:layout_width="0dp"
-                android:layout_height="76dp"
-                android:layout_weight="1"
-                android:text="▶ YouTube (4K HDR)\nVídeos"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:orientation="vertical"
                 android:gravity="center"
-                android:textColor="@color/cyan_neon"
-                android:textSize="12sp"
-                android:background="@drawable/bg_glass_card_focused"
+                android:background="@drawable/card_youtube"
                 android:layout_marginStart="8dp"
                 android:focusable="true" />
 
-            <TextView
+            <!-- TCL CHANNEL -->
+            <LinearLayout
                 android:id="@+id/cardTclChannel"
                 android:layout_width="0dp"
-                android:layout_height="76dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="TCL CHANNEL\nCanais de TV"
+                android:orientation="vertical"
                 android:gravity="center"
-                android:textColor="#FF4444"
-                android:textSize="12sp"
-                android:background="@drawable/selector_tv_card"
+                android:background="@drawable/card_tcl"
                 android:layout_marginStart="8dp"
                 android:focusable="true" />
 
-            <TextView
+            <!-- MAIS APPS -->
+            <LinearLayout
                 android:id="@+id/cardMoreApps"
                 android:layout_width="0dp"
-                android:layout_height="76dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="⊞ Mais Apps"
+                android:orientation="vertical"
                 android:gravity="center"
-                android:textColor="@color/cyan_neon"
-                android:textSize="13sp"
                 android:background="@drawable/selector_tv_card"
                 android:layout_marginStart="8dp"
-                android:focusable="true" />
+                android:focusable="true">
 
-            <TextView
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⊞"
+                    android:textColor="@color/cyan_neon"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mais Apps"
+                    android:textColor="@color/cyan_neon"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- + FAVORITO -->
+            <LinearLayout
                 android:id="@+id/cardAddFavorite"
                 android:layout_width="0dp"
-                android:layout_height="76dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="＋ Favorito"
+                android:orientation="vertical"
                 android:gravity="center"
-                android:textColor="@color/text_secondary"
-                android:textSize="13sp"
                 android:background="@drawable/selector_tv_card"
                 android:layout_marginStart="8dp"
-                android:focusable="true" />
+                android:focusable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="＋"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+ Favorito"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11sp" />
+            </LinearLayout>
         </LinearLayout>
 
-        <!-- ENTRADAS HDMI -->
+        <!-- 4. FILEIRA ENTRADAS HDMI -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="34dp"
             android:orientation="horizontal"
-            android:layout_marginTop="12dp">
+            android:layout_marginTop="8dp">
 
             <TextView
                 android:id="@+id/btnHdmi1"
                 android:layout_width="0dp"
-                android:layout_height="36dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="🔌 HDMI 1"
                 android:gravity="center"
@@ -350,39 +480,40 @@
             <TextView
                 android:id="@+id/btnHdmi2"
                 android:layout_width="0dp"
-                android:layout_height="36dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="🔌 HDMI 2 (eARC) ●"
                 android:gravity="center"
                 android:textColor="@color/green_status"
                 android:textSize="11sp"
                 android:background="@drawable/selector_tv_card"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="8dp"
                 android:focusable="true" />
 
             <TextView
                 android:id="@+id/btnHdmi3"
                 android:layout_width="0dp"
-                android:layout_height="36dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="🔌 HDMI 3"
                 android:gravity="center"
                 android:textColor="@color/text_secondary"
                 android:textSize="11sp"
                 android:background="@drawable/selector_tv_card"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="8dp"
                 android:focusable="true" />
         </LinearLayout>
 
-        <!-- FILEIRA DE POSTERES -->
+        <!-- 5. FILEIRA POSTERES CINEMATOGRÁFICOS -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:layout_marginTop="12dp">
+            android:layout_marginTop="8dp">
 
             <TextView
+                android:id="@+id/poster1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -391,10 +522,12 @@
                 android:paddingBottom="10dp"
                 android:textColor="@color/text_primary"
                 android:textSize="10sp"
-                android:background="@drawable/selector_tv_card"
+                android:textStyle="bold"
+                android:background="@drawable/poster_last_of_us"
                 android:focusable="true" />
 
             <TextView
+                android:id="@+id/poster2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -403,11 +536,13 @@
                 android:paddingBottom="10dp"
                 android:textColor="@color/text_primary"
                 android:textSize="10sp"
-                android:background="@drawable/selector_tv_card"
-                android:layout_marginStart="8dp"
+                android:textStyle="bold"
+                android:background="@drawable/poster_wicked"
+                android:layout_marginStart="6dp"
                 android:focusable="true" />
 
             <TextView
+                android:id="@+id/poster3"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -416,11 +551,13 @@
                 android:paddingBottom="10dp"
                 android:textColor="@color/text_primary"
                 android:textSize="10sp"
-                android:background="@drawable/selector_tv_card"
-                android:layout_marginStart="8dp"
+                android:textStyle="bold"
+                android:background="@drawable/poster_deadpool"
+                android:layout_marginStart="6dp"
                 android:focusable="true" />
 
             <TextView
+                android:id="@+id/poster4"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -429,11 +566,13 @@
                 android:paddingBottom="10dp"
                 android:textColor="@color/text_primary"
                 android:textSize="10sp"
-                android:background="@drawable/selector_tv_card"
-                android:layout_marginStart="8dp"
+                android:textStyle="bold"
+                android:background="@drawable/poster_gladiador"
+                android:layout_marginStart="6dp"
                 android:focusable="true" />
 
             <TextView
+                android:id="@+id/poster5"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -442,11 +581,13 @@
                 android:paddingBottom="10dp"
                 android:textColor="@color/text_primary"
                 android:textSize="10sp"
-                android:background="@drawable/selector_tv_card"
-                android:layout_marginStart="8dp"
+                android:textStyle="bold"
+                android:background="@drawable/poster_stranger_things"
+                android:layout_marginStart="6dp"
                 android:focusable="true" />
 
             <TextView
+                android:id="@+id/poster6"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -455,8 +596,9 @@
                 android:paddingBottom="10dp"
                 android:textColor="@color/text_primary"
                 android:textSize="10sp"
-                android:background="@drawable/selector_tv_card"
-                android:layout_marginStart="8dp"
+                android:textStyle="bold"
+                android:background="@drawable/poster_duna"
+                android:layout_marginStart="6dp"
                 android:focusable="true" />
         </LinearLayout>
     </LinearLayout>
