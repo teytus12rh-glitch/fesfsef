@@ -19,18 +19,21 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
+    - name: Corrigir Nomes de Arquivos com Espaço
+      run: |
+        cd app/src/main/res/drawable || true
+        for f in *\ * *:* ; do
+          if [ -f "$f" ]; then
+            clean_name=$(echo "$f" | sed 's/^[ :]*//')
+            mv "$f" "$clean_name"
+            echo "Corrigido nome de: $f para: $clean_name"
+          fi
+        done
+
     - name: Configurar Gradle 8.7
       uses: gradle/actions/setup-gradle@v3
       with:
         gradle-version: "8.7"
-
-    - name: Garantir Propriedades do AndroidX
-      run: |
-        cat << 'EOF' > gradle.properties
-        android.useAndroidX=true
-        android.nonTransitiveRClass=true
-        org.gradle.jvmargs=-Xmx2048m -XX:MaxMetaspaceSize=512m
-        EOF
 
     - name: Compilar APK
       run: gradle assembleDebug --no-daemon
