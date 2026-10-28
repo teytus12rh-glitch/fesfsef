@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="650dp"
+    android:layout_width="660dp"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="20dp"
@@ -17,16 +17,151 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Escolha um estilo moderno com 1 clique para transformar as cores e a ambiência:"
+        android:text="Navegue com o controle remoto e pressione OK para aplicar instantaneamente:"
         android:textColor="@color/text_secondary"
         android:textSize="12sp"
         android:layout_marginTop="4dp" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvThemesList"
+    <HorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="160dp"
-        android:layout_marginTop="16dp" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- TEMA 1: CYAN -->
+            <LinearLayout
+                android:id="@+id/btnThemeCyan"
+                android:layout_width="115dp"
+                android:layout_height="120dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp"
+                android:background="@drawable/selector_tv_card"
+                android:focusable="true">
+                <View
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/bg_glass_card_focused" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Obsidian\nCyan"
+                    android:gravity="center"
+                    android:textColor="@color/cyan_neon"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="6dp" />
+            </LinearLayout>
+
+            <!-- TEMA 2: CRIMSON -->
+            <LinearLayout
+                android:id="@+id/btnThemeCrimson"
+                android:layout_width="115dp"
+                android:layout_height="120dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/selector_tv_card"
+                android:focusable="true">
+                <View
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/poster_deadpool" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cyberpunk\nCrimson"
+                    android:gravity="center"
+                    android:textColor="#FF0055"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="6dp" />
+            </LinearLayout>
+
+            <!-- TEMA 3: GOLD -->
+            <LinearLayout
+                android:id="@+id/btnThemeGold"
+                android:layout_width="115dp"
+                android:layout_height="120dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/selector_tv_card"
+                android:focusable="true">
+                <View
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/poster_gladiador" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Midnight\nGold Lux"
+                    android:gravity="center"
+                    android:textColor="#FFD700"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="6dp" />
+            </LinearLayout>
+
+            <!-- TEMA 4: EMERALD -->
+            <LinearLayout
+                android:id="@+id/btnThemeEmerald"
+                android:layout_width="115dp"
+                android:layout_height="120dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/selector_tv_card"
+                android:focusable="true">
+                <View
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/poster_wicked" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Emerald\nMatrix OLED"
+                    android:gravity="center"
+                    android:textColor="@color/green_status"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="6dp" />
+            </LinearLayout>
+
+            <!-- TEMA 5: NEBULA -->
+            <LinearLayout
+                android:id="@+id/btnThemeNebula"
+                android:layout_width="115dp"
+                android:layout_height="120dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/selector_tv_card"
+                android:focusable="true">
+                <View
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/poster_stranger_things" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Deep Space\nNebula"
+                    android:gravity="center"
+                    android:textColor="#A855F7"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="6dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
 
     <Button
         android:id="@+id/btnCloseThemeStore"
